@@ -1,0 +1,49 @@
+.container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  z-index: 100;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px;
+}
+
+.headerText {
+  font-family: Poppins;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+  text-align: left;
+  color: #0f1e3d;
+}
+
+.closeBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 32px;
+  height: 32px;
+  min-width: 32px;
+  min-height: 32px;
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+
+  svg {
+    min-width: 32px;
+    height: 32px;
+  }
+}
+
+.main {
+  padding: 0 24px;
+}
