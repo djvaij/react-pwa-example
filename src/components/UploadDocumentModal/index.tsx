@@ -29,7 +29,8 @@ export const UploadDocumentModal: FC<IUploadDocumentModalProps> = ({
 
   const formMethods = useForm();
 
-  const { register, handleSubmit, setValue, control } = formMethods;
+  // const { register, handleSubmit, setValue, control } = formMethods;
+  const { register, handleSubmit, setValue } = formMethods;
 
   useEffect(() => {
     if (!opened) {
