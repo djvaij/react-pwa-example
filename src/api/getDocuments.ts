@@ -1,10 +1,4 @@
-export interface IDocument {
-  id: string;
-  name: string;
-  description: string;
-  type: string;
-  date: string;
-}
+import { IDocument } from '../types/documents';
 
 export const getDocuments = async (): Promise<{ documents: IDocument[] }> => {
   return {

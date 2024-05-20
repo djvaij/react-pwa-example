@@ -5,6 +5,7 @@ import { DocumentsList } from './components/DocumentsList';
 import { UploadDocumentBtn } from './components/UploadDocumentBtn';
 import { UploadDocumentModal } from './components/UploadDocumentModal';
 import { useState } from 'react';
+import { DocumentsProvider } from './contexts/documentsContext';
 
 function App() {
   const [showUploadModal, setShowUploadModal] = useState(true);
@@ -13,13 +14,15 @@ function App() {
     <div className={styles.container}>
       <Header />
       <main className={styles.main}>
-        <DocumentsDescription />
-        <DocumentsList />
-        <UploadDocumentBtn onClick={() => setShowUploadModal(true)} />
-        <UploadDocumentModal
-          opened={showUploadModal}
-          onClose={() => setShowUploadModal(false)}
-        />
+        <DocumentsProvider>
+          <DocumentsDescription />
+          <DocumentsList />
+          <UploadDocumentBtn onClick={() => setShowUploadModal(true)} />
+          <UploadDocumentModal
+            opened={showUploadModal}
+            onClose={() => setShowUploadModal(false)}
+          />
+        </DocumentsProvider>
       </main>
     </div>
   );

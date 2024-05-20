@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import { IDocument, getDocuments } from '../../api/getDocuments';
+import { getDocuments } from '../../api/getDocuments';
 import { NoDocuments } from '../NoDocuments';
+import { IDocument } from '../../types/documents';
 
 export const DocumentsList = () => {
   const [documents, setDocuments] = useState<IDocument[]>([]);
